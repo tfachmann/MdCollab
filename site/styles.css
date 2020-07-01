@@ -73,3 +73,13 @@ pre {
     border-radius: 5px;
     padding: 10px
 }
+
+table {
+    border-collapse:collapse;
+}
+
+th {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid black;
+}
