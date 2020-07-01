@@ -22,23 +22,27 @@
 .content {
     display: flex;
     justify-content: space-between;
+    max-height: inherit;
 }
 
 .input_container {
     margin: 20px;
-    width: 400px;
     display: block;
 }
 
 .output_container {
-    margin-left: 25px;
-    width: 400px;
-    display: block;
+    border: 3px cadetblue solid;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: auto;
+    margin: 10px;
+    max-height: inherit;
 }
 
 body {
-    max-width: 80%;
     font-family: "Computer Modern";
+    max-height: 100vh;
+    margin: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
