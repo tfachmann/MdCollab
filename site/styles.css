@@ -33,6 +33,7 @@
 .output_container {
     border: 3px cadetblue solid;
     padding: 20px;
+    width: 100%;
     border-radius: 10px;
     overflow: auto;
     margin: 10px;
