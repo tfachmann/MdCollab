@@ -1,2 +1,10 @@
+# rust
 /target
+Cargo.lock
+
+# html + js
+node_modules
+package-lock.json
+
+# ide
 /.idea
