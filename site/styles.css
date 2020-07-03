@@ -1,60 +1,89 @@
 @font-face {
-    font-family: "Computer Modern";
-    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
-  }
-@font-face {
   font-family: "Computer Modern";
-  src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
-  font-weight: bold;
+  src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
 }
 @font-face {
-  font-family: "Computer Modern";
-  src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
-  font-style: italic, oblique;
+font-family: "Computer Modern";
+src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
+font-weight: bold;
 }
 @font-face {
-  font-family: "Computer Modern";
-  src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
-  font-weight: bold;
-  font-style: italic, oblique;
+font-family: "Computer Modern";
+src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
+font-style: italic, oblique;
 }
-
-.content {
-    display: flex;
-    justify-content: space-between;
-    max-height: inherit;
-}
-
-.input_container {
-    margin: 20px;
-    display: block;
+@font-face {
+font-family: "Computer Modern";
+src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
+font-weight: bold;
+font-style: italic, oblique;
 }
 
 body {
-    font-family: "Computer Modern";
-    max-height: 100vh;
-    margin: 0px;
+  font-family: "Computer Modern";
+  height: 100%;
 }
 
 .output_container {
-    border: 3px cadetblue solid;
-    padding: 20px;
-    width: 100%;
-    border-radius: 10px;
-    overflow: auto;
-    margin: 10px;
-    max-height: inherit;
+  display: flex;
+  border: 3px cadetblue solid;
+  background-color: cadetblue;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#html_output {
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  height: 100%;
+  overflow-y: scroll;
+  flex: 1 1 0;
 }
 
 textarea {
-    font-size: .8rem;
-    letter-spacing: 1px;
+  font-size: .8rem;
+  letter-spacing: 1px;
 }
 
 textarea {
-    padding: 10px;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  resize: horizontal;
+}
+
+select {
+  border: 1px black solid;
+  border-radius: 3px;
+  width: 100%;
+  margin-left: 5px;
+}
+
+div.frame {
+  display: flex;
+}
+
+.frame {
+background-color: cadetblue;
+border-radius: 10px;
+border: 3px cadetblue solid;
+margin: 10px;
+}
+
+.header {
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 100%;
+}
+
+.footer {
 }
