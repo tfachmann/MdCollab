@@ -10,3 +10,5 @@ function render_html() {
         document.getElementById("html_output").innerHTML = res
     });
 }
+
+render_html()
