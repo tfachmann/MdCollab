@@ -33,14 +33,17 @@ body {
   border-radius: 10px;
 }
 
+.scroll_flex_element {
+  overflow: scroll scroll;
+  flex: 1 1 0;
+}
+
 #html_output {
   background-color: white;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
   height: 100%;
-  overflow-y: scroll;
-  flex: 1 1 0;
 }
 
 textarea {
