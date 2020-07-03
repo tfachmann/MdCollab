@@ -11,4 +11,4 @@ function render_html() {
     });
 }
 
-render_html()
+render_html();
