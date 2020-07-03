@@ -30,6 +30,12 @@
     display: block;
 }
 
+body {
+    font-family: "Computer Modern";
+    max-height: 100vh;
+    margin: 0px;
+}
+
 .output_container {
     border: 3px cadetblue solid;
     padding: 20px;
@@ -38,16 +44,6 @@
     overflow: auto;
     margin: 10px;
     max-height: inherit;
-}
-
-body {
-    font-family: "Computer Modern";
-    max-height: 100vh;
-    margin: 0px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Computer Modern", sans-serif;
 }
 
 textarea {
@@ -61,30 +57,4 @@ textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px #999;
-}
-
-blockquote {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding: 1px;
-    padding-left: 20px;
-    border-left: solid 5px #d9a300;
-    background: #fff0b4;
-}
-
-pre {
-    background: #eee;
-    border: solid 2px gray;
-    border-radius: 5px;
-    padding: 10px
-}
-
-table {
-    border-collapse:collapse;
-}
-
-th {
-    padding-left: 10px;
-    padding-right: 10px;
-    border-bottom: 1px solid black;
 }
