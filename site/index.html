@@ -4,24 +4,37 @@
         <meta charset="utf-8">
         <title>hello-wasm example</title>
         <link rel="stylesheet", type="text/css", href="styles.css">
+        <link rel="stylesheet", type="text/css", href="output-styles/coolName.css">
     </head>
     <body>
+        <div class="header">
+
+        </div>
+
         <div class="content">
             <div class="input_container">
-                <div>
-                    <textarea id="md_input" rows="20", cols="50">
+                <textarea id="md_input" rows="20", cols="50">
 # MdCollab
 
 ---
 
 Type your markdown here!
-                    </textarea>
-                </div>
+                </textarea>
             </div>
             <div class="output_container">
-                <div id="html_output">
+                <div class="frame">
+                    <label for="frame">Style: </label>
+                    <select>
+                        <option value="coolName">Cool Name</option>
+                        <option value="gitHub">GitHub</option>
+                    </select>
+                </div>
+                <div class="scroll_flex_element" id="html_output">
                 </div>
             </div>
+        </div>
+        <div class="footer">
+
         </div>
         <script src="./index.js"></script>
     </body>
