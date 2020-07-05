@@ -4,7 +4,6 @@ var md = document.getElementById("md_input");
 md.addEventListener("keyup", render_html);
 
 var css_selection = document.getElementById("output_css_selection");
-//css_selection.onchange(console.log(css_selection.value));
 css_selection.addEventListener('change', specify_output_css);
 
 function render_html() {
@@ -17,8 +16,7 @@ function render_html() {
 
 function specify_output_css() {
     let new_css_link = "output-styles/" + css_selection.value
-
-    //remove old link
+    //change css file
     document.getElementById("output_css").setAttribute("href", new_css_link)
 }
 
