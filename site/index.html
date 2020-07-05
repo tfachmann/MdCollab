@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>hello-wasm example</title>
-        <link rel="stylesheet", type="text/css", href="styles.css">
-        <link rel="stylesheet", type="text/css", href="output-styles/coolName.css">
+        <link id="site_css" rel="stylesheet", type="text/css", href="styles.css">
+        <link id="output_css" rel="stylesheet", type="text/css", href="output-styles/coolName.css">
     </head>
     <body>
         <div class="header">
@@ -24,9 +24,9 @@ Type your markdown here!
             <div class="output_container">
                 <div class="frame">
                     <label for="frame">Style: </label>
-                    <select>
-                        <option value="coolName">Cool Name</option>
-                        <option value="gitHub">GitHub</option>
+                    <select id="output_css_selection">
+                        <option value="coolName.css">Cool Name</option>
+                        <option value="github.css">GitHub</option>
                     </select>
                 </div>
                 <div class="scroll_flex_element" id="html_output">
