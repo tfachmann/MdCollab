@@ -15,6 +15,18 @@ function render_html() {
 }
 
 
+function get_contents() {
+    //...
+    return md.value;
+}
+
+
+function get_file_name() {
+    //....
+    return 'test.md';
+}
+
+
 function save_contents(contents, filename) {
     var file = new Blob([contents], {type: 'text/plain'});
     if (window.navigator.msSaveOrOpenBlob) // IE10+
