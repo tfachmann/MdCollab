@@ -1,3 +1,5 @@
+var FileSaver = require('./FileSaver.js/dist/FileSaver.js');
+
 var js = import("../pkg/md_collab.js");
 
 var md = document.getElementById("md_input");
@@ -15,7 +17,7 @@ function render_html() {
 }
 
 
-function get_contents() {
+function get_md_contents() {
     //...
     return md.value;
 }
@@ -28,20 +30,11 @@ function get_file_name() {
 
 
 function save_contents(contents, filename) {
-    var file = new Blob([contents], {type: 'text/plain'});
-    if (window.navigator.msSaveOrOpenBlob) // IE10+
+    let file = new Blob([contents], {type: 'text/plain'});
+    if (window.navigator.msSaveOrOpenBlob) { // IE10+
         window.navigator.msSaveOrOpenBlob(file, filename);
-    else { // Others
-        var a = document.createElement("a"),
-                url = URL.createObjectURL(file);
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function() {
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);  
-        }, 0); 
+    } else { // Others
+        FileSaver.saveAs(file, filename);
     }
 }
 
