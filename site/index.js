@@ -1,4 +1,4 @@
-var FileSaver = require('./FileSaver.js/dist/FileSaver.js');
+var FileSaver = require('file-saver');
 
 var js = import("../pkg/md_collab.js");
 
@@ -6,7 +6,7 @@ var md = document.getElementById("md_input");
 md.addEventListener("keyup", render_html);
 
 var save = document.getElementById("btn_save");
-save.addEventListener("click", function(){save_contents(get_contents(), get_file_name());});
+save.addEventListener("click", function(){save_contents(get_md_contents(), get_file_name());});
 
 function render_html() {
     let md_text = md.value;
