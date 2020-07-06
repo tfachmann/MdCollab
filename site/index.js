@@ -1,23 +1,23 @@
 var js = import("../pkg/md_collab.js");
 
 var md = document.getElementById("md_input");
-md.addEventListener("keyup", render_html);
+md.addEventListener("keyup", renderHtml);
 
-var css_selection = document.getElementById("output_css_selection");
-css_selection.addEventListener('change', specify_output_css);
+var cssSelection = document.getElementById("output_css_selection");
+cssSelection.addEventListener("change", specifyOutputCss);
 
-function render_html() {
-    let md_text = md.value;
-    js.then(js => {
-        res = js.render(md_text);
-        document.getElementById("html_output").innerHTML = res
-    });
+function renderHtml () {
+  const mdText = md.value;
+  js.then(js => {
+    const res = js.render(mdText);
+    document.getElementById("html_output").innerHTML = res;
+  });
 }
 
-function specify_output_css() {
-    let new_css_link = "output-styles/" + css_selection.value
-    //change css file
-    document.getElementById("output_css").setAttribute("href", new_css_link)
+function specifyOutputCss () {
+  const newCssLink = "output-styles/" + cssSelection.value;
+  // change css file
+  document.getElementById("output_css").setAttribute("href", newCssLink);
 }
 
-render_html();
+renderHtml();
