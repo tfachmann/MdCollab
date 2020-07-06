@@ -3,6 +3,9 @@ var js = import("../pkg/md_collab.js");
 var md = document.getElementById("md_input");
 md.addEventListener("keyup", render_html);
 
+var save = document.getElementById("btn_save");
+save.addEventListener("click", function(){save_contents(get_contents(), get_file_name());});
+
 function render_html() {
     let md_text = md.value;
     js.then(js => {
