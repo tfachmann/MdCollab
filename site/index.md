@@ -87,7 +87,7 @@ You can add html code to your markdown file like this:
 <p>Dieses Wort ist <b>fett</b>.</p>
 ```
 #### Result
-<p>Dieses Wort ist <b>fett</b>.</p>
+<p>This word is <b>bold</b>.</p>
 
 ## Formatting
 Standard formatting is also implemented like this:
