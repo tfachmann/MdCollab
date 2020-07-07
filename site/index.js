@@ -4,7 +4,7 @@ window.addEventListener("load", render_html);
 
 var md = document.getElementById("md_input");
 md.addEventListener("keyup", render_html);
-md.addEventListener("keydown", print_tab(event), false);
+md.addEventListener("keydown", checkForTab, true);
 
 var css_selection = document.getElementById("output_css_selection");
 css_selection.addEventListener('change', specify_output_css);
@@ -23,21 +23,17 @@ function specify_output_css() {
     document.getElementById("output_css").setAttribute("href", new_css_link)
 }
 
-function print_tab(e) {
-  var keyCode = e.keyCode || e.which;
-  Window.alert(e);
+function checkForTab(e) {
+  let keyCode = e.keyCode || e.which;
   if (keyCode == 9) {
     e.preventDefault();
-    var start = $(this).get(0).selectionStart;
-    var end = $(this).get(0).selectionEnd;
+    let start = md.selectionStart;
+    let end = md.selectionEnd;
 
-    // set textarea value to: text before caret + tab + text after caret
-    $(this).val($(this).val().substring(0, start)
-                + "\t"
-                + $(this).val().substring(end));
+    // set textarea value to: text in front of the selected range + tab + text after the selected range
+    md.value = md.value.substring(0, start) + "\t" + md.value.substring(end);
 
-    // put caret at right position again
-    $(this).get(0).selectionStart =
-    $(this).get(0).selectionEnd = start + 1;
+    // put carriage at right position again
+    md.selectionEnd = start + 1;
   }
 }
