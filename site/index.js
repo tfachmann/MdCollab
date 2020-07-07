@@ -42,7 +42,7 @@ function checkForTab(e) {
 
 function read_md_file(file)
 {
-    var rawFile = new XMLHttpRequest();
+    let rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function ()
     {
@@ -50,7 +50,7 @@ function read_md_file(file)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-                var allText = rawFile.responseText;
+                let allText = rawFile.responseText;
                 md.value = allText;
             }
         }
