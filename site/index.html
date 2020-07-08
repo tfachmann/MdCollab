@@ -3,27 +3,31 @@
     <head>
         <meta charset="utf-8">
         <title>hello-wasm example</title>
-        <link rel="stylesheet", type="text/css", href="styles.css">
+        <link id="site_css" rel="stylesheet", type="text/css", href="styles.css">
+        <link id="output_css" rel="stylesheet", type="text/css", href="output-styles/coolName.css">
     </head>
     <body>
-        <button class="button" id="btn_save">Save</button>
-
+        <div class="header">
+            <button class="button" id="btn_save">Save</button>
+        </div>
         <div class="content">
             <div class="input_container">
-                <div>
-                    <textarea id="md_input" rows="20", cols="50">
-# MdCollab
-
----
-
-Type your markdown here!
-                    </textarea>
-                </div>
+                <textarea id="md_input" rows="20" cols="50"></textarea>
             </div>
             <div class="output_container">
-                <div id="html_output">
+                <div class="frame">
+                    <label for="frame">Style: </label>
+                    <select id="output_css_selection">
+                        <option value="coolName.css">Cool Name</option>
+                        <option value="github.css">GitHub</option>
+                    </select>
+                </div>
+                <div class="scroll_flex_element" id="html_output">
                 </div>
             </div>
+        </div>
+        <div class="footer">
+
         </div>
         <script src="./index.js"></script>
     </body>

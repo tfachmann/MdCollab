@@ -1,18 +1,31 @@
-.content {
-    display: flex;
-    justify-content: space-between;
+html {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Computer Modern";
+  height: 100%;
 }
 
 .input_container {
-    margin: 20px;
-    width: 400px;
-    display: block;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  height: 100%;
 }
 
 .output_container {
-    margin-left: 25px;
-    width: 400px;
-    display: block;
+  display: flex;
+  border: 3px cadetblue solid;
+  background-color: cadetblue;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 10px;
+  margin-left: 10px;
 }
 
 .button {
@@ -27,18 +40,63 @@
     border: 2px solid black;
 }
 
-body {
-    max-width: 80%;
+.scroll_flex_element {
+  overflow: scroll scroll;
+  flex: 1 1 0;
+}
+
+#html_output {
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  height: 100%;
 }
 
 textarea {
-    font-size: .8rem;
-    letter-spacing: 1px;
+  font-size: .8rem;
+  letter-spacing: 1px;
 }
+
 textarea {
-    padding: 10px;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
+  height: inherit;
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  resize: horizontal;
+}
+
+select {
+  border: 1px black solid;
+  border-radius: 3px;
+  width: 100%;
+  margin-left: 5px;
+}
+
+div.frame {
+  display: flex;
+}
+
+.frame {
+background-color: cadetblue;
+border-radius: 10px;
+border: 3px cadetblue solid;
+margin: 10px;
+}
+
+.header {
+  height: 100px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 100%;
+}
+
+.footer {
+  height: 50px;
 }
