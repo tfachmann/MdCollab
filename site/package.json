@@ -1,7 +1,7 @@
 {
   "scripts": {
-	  "serve": "webpack-dev-server",
-	  "build": "webpack"
+    "serve": "webpack-dev-server",
+    "build": "webpack"
   },
   "devDependencies": {
     "eslint": "^7.4.0",
@@ -10,6 +10,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
