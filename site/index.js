@@ -2,7 +2,7 @@ var js = import("../pkg/md_collab.js");
 
 var md = document.getElementById("md_input");
 
-window.addEventListener("load", read_md_file("index.md"));
+window.addEventListener("load", readMdFile("index.md"));
 window.addEventListener("load", render_html);
 
 md.addEventListener("keyup", render_html);
@@ -40,7 +40,7 @@ function checkForTab(e) {
   }
 }
 
-function read_md_file(file)
+function readMdFile(file)
 {
     let rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
