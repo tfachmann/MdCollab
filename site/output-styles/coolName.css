@@ -1,29 +1,34 @@
-#html_output > h1, h2, h3, h4, h5, h6 {
-    font-family: "Computer Modern", sans-serif;
+#html_output > h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Computer Modern", sans-serif;
 }
 
 #html_output > blockquote {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding: 1px;
-    padding-left: 20px;
-    border-left: solid 5px #d9a300;
-    background: #fff0b4;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1px;
+  padding-left: 20px;
+  border-left: solid 5px #d9a300;
+  background: #fff0b4;
 }
 
 #html_output > pre {
-    background: #eee;
-    border: solid 2px gray;
-    border-radius: 5px;
-    padding: 10px
+  background: #eee;
+  border: solid 2px gray;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 #html_output > table {
-    border-collapse:collapse;
+  border-collapse: collapse;
 }
 
 #html_output > th {
-    padding-left: 10px;
-    padding-right: 10px;
-    border-bottom: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid black;
 }
