@@ -30,7 +30,7 @@ jobs:
       run: npm install && npm install -g npm-check
       
     - name: run linter
-      run: npx eslint *.js
+      run: npx eslint -c ./lint/.eslintrc.js "**/*.js"
 
     - name: check dependencies
       run: npm-check
