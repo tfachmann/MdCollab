@@ -1,8 +1,10 @@
 var js = import("../pkg/md_collab.js");
 
+var md = document.getElementById("md_input");
+
+window.addEventListener("load", readMdFile("index.md"));
 window.addEventListener("load", render_html);
 
-var md = document.getElementById("md_input");
 md.addEventListener("keyup", render_html);
 md.addEventListener("keydown", checkForTab, true);
 
@@ -36,4 +38,22 @@ function checkForTab(e) {
     // put carriage at right position again
     md.selectionEnd = start + 1;
   }
+}
+
+function readMdFile(file)
+{
+    let rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                let allText = rawFile.responseText;
+                md.value = allText;
+            }
+        }
+    }
+    rawFile.send(null);
 }
