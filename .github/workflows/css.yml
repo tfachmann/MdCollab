@@ -1,0 +1,25 @@
+name: css
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  lint:
+    defaults:
+      run:
+        shell: bash
+        working-directory: site
+
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - run: npm install
+      
+    - name: run stylelint
+      run: npx stylelint --config ./lint/.stylelintrc.json "**/*.css"

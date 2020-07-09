@@ -1,0 +1,31 @@
+name: Html
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  lint:
+    defaults:
+      run:
+        shell: bash
+        working-directory: site
+
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: install htmllint
+      run: sudo npm install -g htmllint-cli
+      
+    - name: run htmllint
+      run: htmllint --rc ./lint/.htmllintrc **/*.html
+
+    - run: npm install
+
+    - name: run stylelint
+      run: npx stylelint --config ./lint/.stylelintrc.json "**/*.html"
