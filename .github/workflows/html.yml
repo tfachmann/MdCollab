@@ -23,7 +23,7 @@ jobs:
       run: sudo npm install -g htmllint-cli
       
     - name: run htmllint
-      run: htmllint --rc ./lint/.htmllintrc *.html
+      run: htmllint --rc ./lint/.htmllintrc **/*.html
 
     - run: npm install
 
