@@ -16,6 +16,9 @@ cssSelection.addEventListener("change", specifyOutputCss);
 var save = document.getElementById("btn_save");
 save.addEventListener("click", function () { saveContents(getMdContents(), getFileName()); });
 
+var saveToHtml = document.getElementById("btn_save_to_html");
+saveToHtml.addEventListener("click", function () { saveHtmlContents(getHtmlContents(), getHtmlFileName()); });
+
 function renderHtml () {
   const mdText = md.value;
   js.then(js => {
@@ -40,8 +43,27 @@ function getFileName () {
   return "test.md";
 }
 
+function getHtmlContents () {
+    // ...
+    return document.getElementById("html_output").innerHTML;
+}
+
+function getHtmlFileName () {
+    // ...
+    return "test.html";
+}
+
 function saveContents (contents, filename) {
   const file = new Blob([contents], { type: "text/plain" });
+  if (window.navigator.msSaveOrOpenBlob) { // IE10+
+    window.navigator.msSaveOrOpenBlob(file, filename);
+  } else { // Others
+    FileSaver.saveAs(file, filename);
+  }
+}
+
+function saveHtmlContents (contents, filename) {
+  const file = new Blob([contents], { type: "text/html" });
   if (window.navigator.msSaveOrOpenBlob) { // IE10+
     window.navigator.msSaveOrOpenBlob(file, filename);
   } else { // Others
