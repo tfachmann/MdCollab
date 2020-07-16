@@ -44,13 +44,13 @@ function getFileName () {
 }
 
 function getHtmlContents () {
-    // ...
-    return document.getElementById("html_output").innerHTML;
+  // ...
+  return document.getElementById("html_output").innerHTML;
 }
 
 function getHtmlFileName () {
-    // ...
-    return "test.html";
+  // ...
+  return "test.html";
 }
 
 function saveContents (contents, filename) {
