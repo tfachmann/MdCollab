@@ -16,6 +16,12 @@ cssSelection.addEventListener("change", specifyOutputCss);
 var save = document.getElementById("btn_save");
 save.addEventListener("click", function () { saveContents(getMdContents(), getFileName()); });
 
+var load = document.getElementById("btn_load");
+load.addEventListener("click", function () { loadMdFile(); });
+
+//var picker = document.getElementById("file_picker");
+//picker.addEventListener("change", function () { saveToServer("./test.txt")});
+
 function renderHtml () {
   const mdText = md.value;
   js.then(js => {
@@ -29,6 +35,19 @@ function specifyOutputCss () {
   // change css file
   document.getElementById("output_css").setAttribute("href", newCssLink);
 }
+
+function loadMdFile() {
+  var filePicker = document.getElementById("file_picker");
+  filePicker.click();
+}
+
+//function saveToServer(file) {
+//  const rawFile = new XMLHttpRequest();
+//  var data = new FormData();
+//  data.append("data" , "the_text_you_want_to_save");
+//  rawFile.open("POST", file, true);
+//  rawFile.send(data);
+//}
 
 function getMdContents () {
   // ...
