@@ -1,8 +1,16 @@
+import Conclavity from 'conclavity';
+new Conclavity();
+
 var FileSaver = require("file-saver");
 
 var js = import("../pkg/md_collab.js");
 
-var md = document.getElementById("md_input");
+//var md = document.getElementById("md_input");
+//var md = document.getElementsByClassName("textarea");
+var textareas = document.getElementsByTagName("textarea")
+//console.log(md)
+var md = textareas[1]
+var md_text = document.getElementsByClassName("CodeMirror-code")[0]
 
 window.addEventListener("load", readMdFile("index.md"));
 window.addEventListener("load", renderHtml);
@@ -17,7 +25,7 @@ var save = document.getElementById("btn_save");
 save.addEventListener("click", function () { saveContents(getMdContents(), getFileName()); });
 
 function renderHtml () {
-  const mdText = md.value;
+  const mdText = md_text.innerHTML;
   js.then(js => {
     const res = js.render(mdText);
     document.getElementById("html_output").innerHTML = res;
